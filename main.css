@@ -1,0 +1,30 @@
+@import 'normalize.css';
+@import 'theme_1.css';
+
+h1 {
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+p {
+    color: var(--tertiary-color);
+}
+
+header{
+    color: var(--quaternary-color);
+    font-size: 5rem;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+main {
+    background-color: var(--secondary-color);
+}
+
+
+#list li {
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
