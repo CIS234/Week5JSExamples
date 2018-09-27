@@ -21,6 +21,9 @@ main {
     background-color: var(--secondary-color);
 }
 
+#list {
+    list-style-type: none;
+}
 
 #list li {
     font-size: 5rem;

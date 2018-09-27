@@ -41,10 +41,19 @@ function addArtistListItem(painting) {
 }
 
 function filterExpensive(painting){
-  return painting.valueInDollars >= 10000
+  return painting.valueInDollars >= 2
 }
 
 paintings
   .filter(filterExpensive)
+  .sort((a, b) => {
+    if(a.title < b.title){
+      return -1;
+    } else if (a.title === b.title){
+      return 0;
+    } else {
+      return 1;
+    }
+  })
   .map(addArtistListItem);
 
