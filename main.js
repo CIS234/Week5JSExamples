@@ -57,3 +57,7 @@ paintings
   })
   .map(addArtistListItem);
 
+const sumPaintingValues = (total, painting) => total + painting.valueInDollars;
+const totalValue = paintings.reduce(sumPaintingValues, 0);
+console.log(`Total Value: ${totalValue}`);
+
