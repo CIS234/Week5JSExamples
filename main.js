@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 fetch('https://api.myjson.com/bins/d3p74')
   .then(response => response.json())
@@ -7,9 +7,9 @@ fetch('https://api.myjson.com/bins/d3p74')
     paintings
       .filter(filterExpensive)
       .sort((a, b) => {
-        if(a.title < b.title){
+        if (a.title < b.title) {
           return -1;
-        } else if (a.title === b.title){
+        } else if (a.title === b.title) {
           return 0;
         } else {
           return 1;
@@ -28,8 +28,9 @@ fetch('https://api.myjson.com/bins/d3p74')
  */
 function addArtistListItem(painting) {
   const titleAndArtist = `${painting.title} by ${painting.artist}`;
-  const list = document.getElementById("list");
-  const artistLi = document.createElement("li");
+  const list = document.getElementById('list');
+  const artistLi = document.createElement('li');
+  artistLi.classList.add('animated', 'bounceInDown', 'tada');
   const artistText = document.createTextNode(titleAndArtist);
   artistLi.appendChild(artistText);
   list.appendChild(artistLi);
@@ -41,8 +42,8 @@ function addArtistListItem(painting) {
  * @param painting a Painting object with {artist, title, valueInDollars}
  * @returns {boolean}
  */
-function filterExpensive(painting){
-  return painting.valueInDollars >= 2
+function filterExpensive(painting) {
+  return painting.valueInDollars >= 2;
 }
 
 /**
